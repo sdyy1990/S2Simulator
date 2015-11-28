@@ -1,0 +1,8 @@
+This folder contains the event-based network simulator for the SpaceShuffle project.
+
+The initial version of this simulator is designed and implemented by Wenzhi Cui.
+
+=============Contact==========
+Ye Yu
+ye.yu@uky.edu
+
