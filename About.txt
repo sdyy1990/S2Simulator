@@ -6,3 +6,26 @@ The initial version of this simulator is designed and implemented by Wenzhi Cui.
 Ye Yu
 ye.yu@uky.edu
 
+-----
+Topology generator
+
+
+ run ./geneMSG1RUni.py #switch #hosts #port #topologies, 
+ for example,
+
+ ./geneMSG1RUni.py 10 20 8 1
+
+ will generate 1 topology that consists of exactly 10 switches, 20 hosts, each switch connects to 2 hosts, each switch has 8 ports, (so there are 3 spaces), 
+ See 20.10.8.0.MSG1.BU3.Topo for the details of the topology.
+ ---
+ Each line of that file describes an entity of the topology
+ for example,
+ N 10 -- there are 10 switches
+ L 3 -- 3 spaces
+ D 1 -- this is a discarded parameter
+ E 6 9 1 -- there is an edge connects the 6th switch and the 9th switch
+ C 0 82035 920486 348884  -- the coordinate of switch with index 0 (which is the 1st switch) is 0.082035, 0.0920486, 0.348884
+ H 13 7 0.655399 -- The 13th host is connected to the 7th switch. The identifier of that host is "0.655399"
+ --
+
+
