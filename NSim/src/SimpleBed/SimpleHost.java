@@ -181,18 +181,18 @@ public class SimpleHost extends Node {
     public void setRelatedSwitch(SimpleSwitch simpleSwitch) {
         this.relatedSwitch = simpleSwitch;
     }
-	@Override
-	public String getName() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
+    
+    public void tryReleaseFlow(int id2, int id3, int flowid) {
+        Simusys.tryReleaseFlow(id2, id3,flowid);
+    }
+
 	public String getState() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-    public void tryReleaseFlow(int id2, int id3, int flowid) {
-        Simusys.tryReleaseFlow(id2, id3,flowid);
-    }
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

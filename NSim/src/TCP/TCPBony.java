@@ -102,12 +102,10 @@ public class TCPBony implements Support.Entity {
         }
     }
 
-    @Override
     public String getName() {
         return "Port " + port + "@" + parent.getName();
     }
 
-    @Override
     public boolean performEvent(NetworkEvent event) {
         if (this.finished()) return false;
         if (event.getTarget() == this) {
@@ -341,7 +339,6 @@ public class TCPBony implements Support.Entity {
             return false;
     }
 
-    @Override
     public boolean performPendingEventsAt(long tick) {
         for (Enumeration<NetworkEvent> enums = events.elements(); enums.hasMoreElements(); ) {
             NetworkEvent ne = enums.nextElement();
@@ -353,7 +350,6 @@ public class TCPBony implements Support.Entity {
         return true;
     }
 
-    @Override
     public void addEvent(NetworkEvent e) {
         events.add(e);
     }
@@ -363,7 +359,6 @@ public class TCPBony implements Support.Entity {
         return LFS >= ELEPHANT;
     }
 
-    @Override
     public String getState() {
         String res = "";
 
@@ -409,7 +404,6 @@ public class TCPBony implements Support.Entity {
         return (double) sumw / nloss;
     }
 
-    @Override
     public boolean performEventsAt(long tick) {
         return false;
     }

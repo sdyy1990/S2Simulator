@@ -53,12 +53,10 @@ public abstract class SimpleSwitch extends Node {
         h0.setEdgeLink(l);
     }
 
-    @Override
     public String getState() {
         return "["+buffer_size+"]";
     }
 
-    @Override
     public boolean performEvent(NetworkEvent event) {
 
         if (event.getTarget()== this) {
@@ -106,7 +104,6 @@ public abstract class SimpleSwitch extends Node {
 
 
 
-    @Override
     public boolean performEventsAt(long tick) {
         for (int i = 0; i < this.send_events.size(); i++) {
             Vector<NetworkEvent> sb = send_events.get(i);
@@ -121,7 +118,6 @@ public abstract class SimpleSwitch extends Node {
         return true;
     }
 
-    @Override
     public boolean performPendingEventsAt(long tick) {
         Vector<Vector<NetworkEvent>> rb = new Vector<Vector<NetworkEvent>>();
         int [] a = new int[recv_events.size()];
@@ -164,4 +160,9 @@ public abstract class SimpleSwitch extends Node {
     protected Vector<NetworkEvent> getSendQueueByLink(Link link) {
         return send_events.get(ports.indexOf(link));
     }
+
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

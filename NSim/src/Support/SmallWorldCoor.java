@@ -76,35 +76,29 @@ public class SmallWorldCoor implements Coordinate {
         return a;
     }
 
-    @Override
     public double dist_to_switch(Coordinate x, int dim) {
         System.out.println("do not use this dist_to_switch with given dim");
         return 0;
     }
 
-    @Override
     public double dist_to_switch_fixdim(Coordinate x, int dim) {
         System.out.println("do not use this dist_to_switch_fixdim");
         return 0;
     }
 
-    @Override
     public double dist_to_Host(double host) {
         // TODO Auto-generated method stub
         return 0;
     }
 
-    @Override
     public double dist_to_Host(Coordinate hostC) {
         return dist_to_switch(hostC);
     }
 
-    @Override
     public int getdim() {
         return dim;
     }
 
-    @Override
     public void generate_from_content(long x) {
         System.out.println("do not use this generate_from_content");
     }

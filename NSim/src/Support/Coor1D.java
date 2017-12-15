@@ -34,7 +34,6 @@ public class Coor1D implements Coordinate {
         return min;
     }
 
-    @Override
     public void generate_from_content(long x) {
         // TODO Auto-generated method stub
 
@@ -45,12 +44,10 @@ public class Coor1D implements Coordinate {
         else return p;
     }
 
-    @Override
     public double dist_to_switch(Coordinate x) {
         return this.dist_to_switch(x,this.switchcoor.length);
     }
 
-    @Override
     public double dist_to_Host(double host) {
         return circulardist(host,hostcoor);
     }
@@ -64,14 +61,12 @@ public class Coor1D implements Coordinate {
         a+=","+hostcoor;
         return a;
     }
-    @Override
     public double dist_to_switch_fixdim(Coordinate x, int dim) {
         dim = dim % this.switchcoor.length;
         Coor1D xx = (Coor1D) x;
 
         return circulardist(xx.switchcoor[dim],this.switchcoor[dim]);
     }
-    @Override
     public int getdim() {
         return switchcoor.length;
     }

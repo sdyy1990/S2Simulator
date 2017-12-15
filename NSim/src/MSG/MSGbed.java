@@ -12,7 +12,7 @@ public class MSGbed {
         File file = null;
 
         if (args.length <5) {
-            System.out.println("Jellyfish Simulator");
+            System.out.println("SpaceShuffle Simulator");
             System.out.println("arg0 : port number ");
             System.out.println("arg1 : host number ");
             System.out.println("arg2 : Topo File");
